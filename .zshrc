@@ -1,1 +1,1 @@
-source ./zplug.zsh  # TODO: REPLACE PATH
+source $HOME/.zplug.zsh
