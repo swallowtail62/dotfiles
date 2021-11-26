@@ -18,6 +18,9 @@ zplug "zsh-users/zsh-autosuggestions"  # https://github.com/zsh-users/zsh-autosu
 ### Terminal Colors
 zplug "chrissicool/zsh-256color"  # https://github.com/chrissicool/zsh-256color
 
+### Powerlevel10
+zplug "romkatv/powerlevel10k", as:theme, depth:1  # https://github.com/romkatv/powerlevel10k#zplug
+
 ### Manage zplug itself as package
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'  # https://github.com/zplug/zplug#let-zplug-manage-zplug
 
