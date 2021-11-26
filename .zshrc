@@ -13,3 +13,30 @@ fi
 
 ## Load Alias
 source $HOME/.aliases
+
+# ------------------------------
+# asdf Settings
+# ------------------------------
+if [ -f "/usr/local/opt/asdf/asdf.sh" ]; then . "/usr/local/opt/asdf/asdf.sh"; fi
+
+
+# ------------------------------
+# GCP Settings
+# ------------------------------
+## The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+
+## The next line enables shell command completion for gcloud.
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+
+# ------------------------------
+# Kubectl Settings
+# ------------------------------
+source <(kubectl completion zsh)
+
+# ------------------------------
+# Istioctl Settings (managed by asdf)
+# ------------------------------
+if which asdf >/dev/null; then
+  source `asdf where istioctl`/tools/_istioctl
+fi
