@@ -1,0 +1,10 @@
+# List
+alias ls="ls -FG"
+alias ll="ls -l"
+alias la="ls -a"
+
+# Docker
+alias dc="docker-compose"
+
+# Kubectl
+alias k="kubectl"
