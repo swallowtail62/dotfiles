@@ -8,3 +8,26 @@ if [ ! -d $ZPLUG_HOME ]; then
 fi
 
 source $ZPLUG_HOME/init.zsh
+
+
+## Plugins
+
+### Auto Suggestions
+zplug "zsh-users/zsh-autosuggestions"  # https://github.com/zsh-users/zsh-autosuggestions
+
+### Terminal Colors
+zplug "chrissicool/zsh-256color"  # https://github.com/chrissicool/zsh-256color
+
+### Manage zplug itself as package
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'  # https://github.com/zplug/zplug#let-zplug-manage-zplug
+
+## Install plugins that have'nt been installed
+if ! zplug check --verbose; then
+  printf "There are zsh plugins that have'nt been installed. Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
+
+## Load all installed plugins
+zplug load
