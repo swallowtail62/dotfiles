@@ -19,6 +19,10 @@ source $HOME/.aliases
 # ------------------------------
 if [ -f "/usr/local/opt/asdf/asdf.sh" ]; then . "/usr/local/opt/asdf/asdf.sh"; fi
 
+# ------------------------------
+# Cargo (Rust) Settings
+# ------------------------------
+if [ -f "$HOME/.cargo/env" ]; then . "$HOME/.cargo/env"; fi
 
 # ------------------------------
 # GCP Settings
