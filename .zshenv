@@ -14,3 +14,8 @@ SAVEHIST=1000000
 setopt hist_ignore_dups
 setopt hist_ignore_all_dups
 setopt hist_reduce_blanks
+
+# ------------------------------
+# LS Color
+# ------------------------------
+export LSCOLORS=gxfxcxdxbxegedabagacad
