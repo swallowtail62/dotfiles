@@ -10,6 +10,10 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+## zsh completion
+COMPLETION_DIR=$HOME/.zsh/completion
+[ ! -d $COMPLETION_DIR ] && mkdir -p $COMPLETION_DIR
+fpath=($COMPLETION_DIR $fpath)
 
 ## Load Alias
 source $HOME/.aliases
@@ -18,6 +22,14 @@ source $HOME/.aliases
 # asdf Settings
 # ------------------------------
 if [ -f "/usr/local/opt/asdf/asdf.sh" ]; then . "/usr/local/opt/asdf/asdf.sh"; fi
+
+# ------------------------------
+# Docker Settings
+# ------------------------------
+if which docker-compose >/dev/null; then
+  DOCKER_COMPLETION=$COMPLETION_DIR/_docker-compose
+  [ ! -f $DOCKER_COMPLETION ] && curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose > $DOCKER_COMPLETION
+fi
 
 # ------------------------------
 # Cargo (Rust) Settings
@@ -44,3 +56,6 @@ source <(kubectl completion zsh)
 if which asdf >/dev/null; then
   source `asdf where istioctl`/tools/_istioctl
 fi
+
+## Load completions
+autoload -Uz compinit && compinit -i
