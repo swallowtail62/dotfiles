@@ -15,6 +15,9 @@ source $ZPLUG_HOME/init.zsh
 ### Auto Suggestions
 zplug "zsh-users/zsh-autosuggestions"  # https://github.com/zsh-users/zsh-autosuggestions
 
+### Completions
+zplug "zsh-users/zsh-completions"  # https://github.com/zsh-users/zsh-completions
+
 ### Terminal Colors
 zplug "chrissicool/zsh-256color"  # https://github.com/chrissicool/zsh-256color
 
