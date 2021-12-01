@@ -21,7 +21,8 @@ source $HOME/.aliases
 # ------------------------------
 # asdf Settings
 # ------------------------------
-if [ -f "/usr/local/opt/asdf/asdf.sh" ]; then . "/usr/local/opt/asdf/asdf.sh"; fi
+if [ -f "/usr/local/opt/asdf/asdf.sh" ]; then . "/usr/local/opt/asdf/asdf.sh"; fi  # For intel mac
+if [ -f "/opt/homebrew/opt/asdf/libexec/asdf.sh" ]; then . "/opt/homebrew/opt/asdf/libexec/asdf.sh"; fi  # For M1 mac
 
 # ------------------------------
 # Docker Settings
