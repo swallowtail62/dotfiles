@@ -49,12 +49,14 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 # ------------------------------
 # Kubectl Settings
 # ------------------------------
-source <(kubectl completion zsh)
+if where kubectl &>/dev/null; then
+  source <(kubectl completion zsh)
+fi
 
 # ------------------------------
 # Istioctl Settings (managed by asdf)
 # ------------------------------
-if which asdf >/dev/null; then
+if which asdf >/dev/null && asdf where istioctl &>/dev/null; then
   source `asdf where istioctl`/tools/_istioctl
 fi
 
