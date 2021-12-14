@@ -62,3 +62,10 @@ fi
 
 ## Load completions
 autoload -Uz compinit && compinit -i
+
+# ------------------------------
+# AWS Settings
+# ------------------------------
+if which aws_completer >/dev/null &&; then
+  complete -C `which aws_completer` aws
+fi
