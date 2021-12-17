@@ -25,6 +25,12 @@ if [ -f "/usr/local/opt/asdf/asdf.sh" ]; then . "/usr/local/opt/asdf/asdf.sh"; f
 if [ -f "/opt/homebrew/opt/asdf/libexec/asdf.sh" ]; then . "/opt/homebrew/opt/asdf/libexec/asdf.sh"; fi  # For M1 mac
 
 # ------------------------------
+# Jetbrains Toolbox Settings
+# ------------------------------
+JETBRAINS_BIN="$HOME/jetbrains/bin"
+if [ -d $JETBRAINS_BIN ]; then export PATH=$JETBRAINS_BIN:$PATH; fi
+
+# ------------------------------
 # Docker Settings
 # ------------------------------
 if which docker-compose >/dev/null; then
