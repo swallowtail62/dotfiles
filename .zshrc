@@ -25,6 +25,11 @@ if [ -f "/usr/local/opt/asdf/asdf.sh" ]; then . "/usr/local/opt/asdf/asdf.sh"; f
 if [ -f "/opt/homebrew/opt/asdf/libexec/asdf.sh" ]; then . "/opt/homebrew/opt/asdf/libexec/asdf.sh"; fi  # For M1 mac
 
 # ------------------------------
+# asdf Java Settings
+# ------------------------------
+if [ -f "$HOME/.asdf/plugins/java/set-java-home.zsh" ]; then . "$HOME/.asdf/plugins/java/set-java-home.zsh"; fi
+
+# ------------------------------
 # Jetbrains Toolbox Settings
 # ------------------------------
 JETBRAINS_BIN="$HOME/jetbrains/bin"
