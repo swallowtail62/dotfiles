@@ -14,6 +14,9 @@ fi
 COMPLETION_DIR=$HOME/.zsh/completion
 [ ! -d $COMPLETION_DIR ] && mkdir -p $COMPLETION_DIR
 fpath=($COMPLETION_DIR $fpath)
+## case insentive
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
 
 ## Load Alias
 source $HOME/.aliases
