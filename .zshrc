@@ -18,6 +18,9 @@ fpath=($COMPLETION_DIR $fpath)
 ## Load Alias
 source $HOME/.aliases
 
+## history
+setopt share_history
+
 # ------------------------------
 # asdf Settings
 # ------------------------------
