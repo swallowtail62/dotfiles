@@ -22,8 +22,6 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}=
 ## Load Alias
 source $HOME/.aliases
 
-## history
-setopt share_history
 
 # ------------------------------
 # asdf Settings
