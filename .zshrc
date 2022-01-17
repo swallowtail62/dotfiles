@@ -77,6 +77,8 @@ if which asdf >/dev/null && asdf where istioctl &>/dev/null; then
 fi
 
 ## Load completions
+autoload bashcompinit
+bashcompinit
 autoload -Uz compinit && compinit -i
 
 # ------------------------------
