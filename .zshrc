@@ -24,6 +24,11 @@ source $HOME/.aliases
 
 
 # ------------------------------
+# Mac OS Settings
+# ------------------------------
+ulimit -n 16384  # File Limitation 2^14
+
+# ------------------------------
 # asdf Settings
 # ------------------------------
 if [ -f "/usr/local/opt/asdf/asdf.sh" ]; then . "/usr/local/opt/asdf/asdf.sh"; fi  # For intel mac
