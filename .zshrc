@@ -87,3 +87,10 @@ autoload -Uz compinit && compinit -i
 if which aws_completer >/dev/null &&; then
   complete -C `which aws_completer` aws
 fi
+
+# ------------------------------
+# Golang Settings
+# ------------------------------
+if which go >/dev/null; then
+  export PATH=$PATH:$(go env GOPATH)/bin
+fi
