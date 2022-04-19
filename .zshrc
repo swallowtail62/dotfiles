@@ -99,3 +99,10 @@ fi
 if which go >/dev/null; then
   export PATH=$PATH:$(go env GOPATH)/bin
 fi
+
+# ------------------------------
+# MySQL client
+# ------------------------------
+if [ -d /opt/homebrew/opt/mysql-client ]; then
+  export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+fi
