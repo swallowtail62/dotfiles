@@ -4,8 +4,8 @@ alias ll="ls -l"
 alias la="ls -a"
 
 # Docker
-alias dc="docker-compose"
-alias dcsvc="docker-compose ps --services"
+alias dc="docker compose"
+alias dcsvc="docker compose ps --services"
 
 # Kubectl
 alias k="kubectl"
