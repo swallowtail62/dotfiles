@@ -25,6 +25,10 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}=
 ## Load Alias
 source $HOME/.aliases
 
+## Load completions
+autoload bashcompinit
+bashcompinit
+autoload -Uz compinit && compinit -i
 
 # ------------------------------
 # Mac OS Settings
@@ -82,11 +86,6 @@ fi
 if which asdf >/dev/null && asdf where istioctl &>/dev/null; then
   source `asdf where istioctl`/tools/_istioctl
 fi
-
-## Load completions
-autoload bashcompinit
-bashcompinit
-autoload -Uz compinit && compinit -i
 
 # ------------------------------
 # AWS Settings
